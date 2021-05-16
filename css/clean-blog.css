@@ -19,6 +19,14 @@ p a {
   text-decoration: underline;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
 h1,
 h2,
 h3,

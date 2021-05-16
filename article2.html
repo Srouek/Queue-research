@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>File d'attente - L’aspect technique</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Sommaire</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#intro">La théorie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#carateristique">Des caractéristiques</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kendall">Kendall notation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ressource.html">Ressources</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://foqus.ai/wp-content/uploads/2020/06/ZARA.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>L’aspect technique</h1>
+            <h2 class="subheading">Chaque file d'attente est une opportunité de business qui n'attend que d'être solutionné.</h2>
+            <span class="meta">Posted by
+              <a href="#">Stéphane ROUEK</a>
+            on May 16, 2021</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+          <h2 class="section-heading" id="intro">La théorie des file d’attente</h2>
+          <h3>définition de la file d’attente:</h3>
+
+          <p>Une file d’attente est un regroupement de personnes ou de choses, qui attendent de manière organisée. Cela peut être des objets sur une chaîne de montage, les voitures entrant sur l’autoroute, des avions attendant de décoller, ou bien des personnes qui font leur course, qui attendent aux toilettes, ou des groupes qui vont à un concert.  Il attendent en général un service ou un bien, payer leurs courses, faire la queue chez le médecin, attendre avec son groupe pour rentrer en soirée, faire atterrir ou bien décoller des avions, les applications sont illimitées.</p>
+
+          <p>En principe, cet événement arrive lorsque la demande ne peut être satisfaite aussi vite que l’offre puisse être fournie, mais cela n’influence pas le prix de l’offre pour autant, qui lui-même n’est pas toujours existant exemple: “le prix est inexistant sur les pistes de décollage des aéroports”.</p>
+
+          <p>L’analyse d’un point de vue mathématique a vu le jour avec <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Erlang/">Agner Krarup Erlang</a>. Collaborateur scientifique pour la Copenhagen Telephone Company, il était chargé d’estimer la capacité de la centrale téléphonique de Copenhague, en d’autre terme le nombre de commutateurs et le nombre d'employés pour les changer. A l’époque où les numéros de téléphone n’existaient pas, tous les téléphones étaient reliés à une centrale qui se chargeait de nous brancher avec notre correspondant à l’aide de commutateurs manipulés par des employés (des opérateurs, ou plutôt des opératrices). En bref Erlang à écrit de nombreuse théorie de 1909 à 1917 qui sont réuni dans deux articles, The theory of probability and telephone conversations et Solution of some problems in the theory of probability of significance in automatic telephone exchanges.</p>
+
+          <p>Ces recherches ont ouvert la voie à de nombreux chercheurs, dont un pour qui nous donnerons une attention particulière. Mais avant cela il nous faut mettre en lumière les caractéristiques d’une file d’attente.</p>
+
+          <h2 class="section-heading" id="carateristique">Les 6 caractère commun à une file d’attente</h2>
+
+          <p></p>
+          <h3>Les entrées</h3>
+
+          <p>Ce sont les personnes ou les choses qui arrivent pour consommer ou bénéficier du service, par exemple, la fréquence des avions prêts à décoller, ou bien les personnes prêtes à embarquer.</p>
+        
+          <p>On se concentre généralement sur leur fréquence d'arrivée qui peut-être régulière, ou bien aléatoire.</p>
+
+          <h3>Les sortis</h3>
+
+          <p>Ce sont ceux qui viennent consommer ou bénéficier du service. On pense souvent qu’ils n’ont pas d’influence sur l'efficacité d’une file d’attente, cependant il arrive parfois de devoir les prendre en compte, par exemple,  les checking des bagages dans les aéroports nous fait vider nos sac, pour qu’ils puissent être vérifier, mais le moment on l’on récupère nos affaire est la sortis et sur cas elle n’est pas instantané.</p>
+
+          <p>On y analyse la capacité et la vitesse de sortie.</p>
+
+          <h3>Les canaux de service</h3>
+
+          <p>Les lieux où sont fournis les services. Ils peuvent être un ou plusieurs, exemple: un seul WC, ou bien plusieurs caisses de supermarché.</p>
+
+          <p>On y analyse la vitesse du service et le nombre de canaux de distribution.</p>
+
+          <h3>Le système de distribution</h3>
+
+          <p>C’est tout simplement la manière dont le service le service lui-même est distribué. Il existe plusieurs manières mais on peut se concentrer sur les trois principales.</p>
+          
+          <ul>
+              <li>
+                Premier arrivé, premier servis:
+                <ul>
+                    <li>
+                        C’est le plus connue de tous et le plus utilisé surtout pour les gestion de flux humain.
+                    </li>
+                </ul>
+              </li>
+
+              <li>
+                Dernier arrivé, premier servis:
+                <ul>
+                    <li>
+                        Il est assez connu dans les systèmes de remplissage ou d’empilement, exemple: lorsqu’un ferry se remplit de véhicule et que son entrée est aussi sa sortie, alors les premier véhicule à embarquer seront les derniers à débarquer.
+
+                    </li>
+                </ul>
+              </li>
+
+              <li>
+                Servis aléatoire:
+                <ul>
+                    <li>
+                        Son nom est assez explicite.
+                    </li>
+                </ul>
+              </li>
+
+              <li>
+                Service à la priorité:
+                <ul>
+                    <li>
+                        Assez peu connus pourtant, tous les services d’urgence hospitalier fonctionnent avec.
+                    </li>
+                </ul>
+              </li>
+          </ul>
+
+
+          <h3>Le maximum d’entrée autorisé dans le système</h3>
+
+          <p>Le nombre maximum de choses ou de personnes que la file d’attente peut supporter, cela n’est pas forcément lié à la quantité d'offres distribuables.</p>
+
+          <h3>La source d’appel</h3>
+
+          <p>Il sert à connaître le contexte dans lequel évolue la file d’attente, car une file d’attente n’est pas perçue de la même manière pour un magasin de vêtement, que pour les services d’urgences d’un Hôpital.</p>
+
+          <h3> Encore quelques notions</h3>
+
+          <a href="#">
+            <img class="img-fluid" src="img/system.png" alt="systeme">
+          </a>
+          <span class="caption text-muted">Les entrées et les services sont appelés le système.</span>
+
+          <h2 class="section-heading" id="kendall">Kendall notation the Queue Theory</h2>
+
+          <p>Afin de réduire les effets négatifs d'une file d'attente, il faut pouvoir mesurer ses performances. Les théories sur les files d'attentes ont vu le jour et la notation de Kendall avec elle. Elle a pour but de déterminer les mesure de performance d'une queue, qui peuvent être utilisées pour concevoir des services. Il faut comprendre que dans bien des cas, l'attente pour un service ne peut être éliminée complètement sans engendrer des coûts excessifs.</p>
+
+          <p>La formule de Kendall est la suivante <span class="bold">(A/B/C):(D/E/F)</span>.</p>
+
+          <p><span class="bold">A</span> représente le flux interval d'arriver, on le modélise comme on le souhaite nombre d’unité qui arrive par heure, par minute par seconde, par jour, etc...</p>
+            
+          <p><span class="bold">B</span> est le temps de distribution d’un service. Il est important de préciser que dans exemple, nous ne prendrons pas en compte les variations de temps de service, mais plutôt une moyenne pour faciliter le calcul.</p>
+
+          <p><span class="bold">C</span> est le nombre de points de distribution.</p>
+
+          <p><span class="bold">D</span> est la discipline du système. exemple “premier arrivé premier servis”.</p>
+
+          <p><span class="bold">E</span> est le nombre maximum admis dans le système. Il est la plupart du temps infinis mais il peut être définis</p>
+
+          <p><span class="bold">F</span> qui est la source d’appel, qui peut être définie ou indéfinie. Cette dernière lettre n’est pas tout le temps prise en compte dans les calculs, du fait qu’elle dépend de l’appréciation de ceux qui l'analysent.</p>
+          
+          <p class="italic">Si vous l’avez remarqué, la notation de Kendall prend en compte les 6 caractéristiques d’une file d’attente émise un peu plus tôt.</p>
+
+          <p>Maintenant prenons un exemple simple de type M/M/1 pour la mettre en pratique.</p>
+
+          <cite>Nous sommes les gérants d’un fast-food et nous souhaitons connaître le nombre d'employés qu’il nous faudrait pour servir les clients qui viennent prendre un café, sans faire patienter trop longtemps les consommateurs, mais aussi sans trop dépenser en ressources humaines.</cite>
+          <p></p>
+          <cite>Nous avons pu calculer qu’en moyenne, 4 nouveaux clients arrivent toutes les 10 min et chaque client dépensent en moyenne 12 € chez nous. Nos employés, eux, mettent en moyenne 5 min à servir un client et ils sont 2 baristas pour gérer le flux de clients, payé 12€ brut de l’heure.</cite>
+
+          <p>Avec toutes ses données on a:</p>
+          <ul>
+              <li>L'intervalle d'arrivé que l’on nommera <span class="bold">“𝜆”</span>, qui est de 4 personnes toutes les 10 min, 60 min/10 min vaut 6 fois 4,, donc 24 par heure.</li>
+
+              <li>Le temps de distribution du service que l’on nommera <span class="bold">“Ts”</span>, qui est de 1 toute les 5 min, 60 min/5 min vaut 12, donc 12 clients par heure</li>
+
+              <li>Le nombre de distributeurs que l’on nommera <span class="bold">“Ns”</span>, qui est de 3 car il y a trois employés</li>
+
+              <li>Le coût d'un service que l’on nommera <span class="bold">“Cs”</span>, qui est de 12 € par heure.</li>
+
+              <li>Le coût de l’attente que l’on nommera <span class="bold">“Ca”</span>, qui lui est le nombre de personnes qui attendent multiplié par la dépense moyenne des clients. Il faut prendre en compte l’intervalle d’arriver moins la capacité d’un distributeur en même temps, c’est-à-dire 4 personnes toutes les 10 min moins 1 personne toutes 5min, donc 2 personnes servi toutes les 10min. Cela fait 4-2 toutes les 10min ou 24-12 par heure, 12 personnes par heure qui attendent pour 1 service.</li>
+          </ul>
+
+          <p>Chose à savoir dans une formule <span class="bold">M/M/1</span> ou <span class="bold">M/M/S</span>, l’intensité du trafic ne peut dépasser 1. On le calcule grâce l’intervalle d'arriver divisé par temps de service multiplié par le nombre de distributeurs. </p>
+
+          <p>𝜆/Ns*Ts --> 24/(3*12) =0.66</p>
+
+          <p>Nous avons désormais tous les éléments pour calculer le nombre d’employés optimal en fonction de leur coût et du temps de service.</p>
+
+          
+            <img class="img-fluid" src="https://image.slidesharecdn.com/heizermodd-121111105624-phpapp02/95/heizer-mod-d-21-638.jpg?cb=1352631634" alt="Optimum_level_server">
+          
+          <span class="caption text-muted">Le nombre optimal de server.</span>
+
+          <p>Mais avant ça nous avons besoin de connaître le temps d’attente d’attente estimé dans la file, que l’on nommera<span class="bold">“Wq”</span>.</p>
+
+          <p>Wq = 𝜆/((Ns*Ts)*((Ns*Ts)-𝜆))</p>
+          <p>Wq = 24/((3*12)*((3*12)-24))</p>
+          <p>Wq = 24/(36*12)</p>
+          <p>Wq = 0.06 par heure cela équivaut à peu près à 3 min et 20s</p>
+
+          <p>Puis enfin pour connaître le nombre d’employés optimal pour servire nos client on calcule  le coût total de l’attente plus le coût des services  et cela pour différente quantité de services</p>
+
+          <p>Ns * Cs + Wq * Ca</p>
+
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Nombre de canaux</th>
+                      <th>Coût des canaux</th>
+                      <th>Coût de l'attente</th>
+                      <th>Total des coûts</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>3</td>
+                      <td>36,00 €</td>
+                      <td>144,00 €</td>
+                      <td>180,00 €</td>
+                  </tr>
+                  <tr>
+                      <td>4</td>
+                      <td>48,00 €</td>
+                      <td>72,00 €</td>
+                      <td>120,00 €</td>
+                  </tr>
+                  <tr>
+                      <td>5</td>
+                      <td>60,00 €</td>
+                      <td>48,00 €</td>
+                      <td>108,00 €</td>
+                  </tr>
+                  <tr>
+                      <td>6</td>
+                      <td>72,00 €</td>
+                      <td>36,00 €</td>
+                      <td>108,00 €</td>
+                  </tr>
+                  <tr>
+                      <td>7</td>
+                      <td>84,00 €</td>
+                      <td>28,80 €</td>
+                      <td>112,80 €</td>
+                  </tr>
+                  <tr>
+                      <td>8</td>
+                      <td>96,00 €</td>
+                      <td>24,00 €</td>
+                      <td>120,00 €</td>
+                  </tr>
+                  <tr>
+                      <td>9</td>
+                      <td>108,00 €</td>
+                      <td>20,57 €</td>
+                      <td>128,57 €</td>
+                  </tr>
+                  <tr>
+                      <td>10</td>
+                      <td>120,00 €</td>
+                      <td>18,00 €</td>
+                      <td>138,00 €</td>
+                  </tr>
+              </tbody>
+          </table>
+
+          
+            <img class="img-fluid" src="img/graphique.png" alt="systeme">
+          
+
+          <p>Le résultat est qu’il est préférable d'engager 5 ou 6 employés pour traiter le flux de client de façon optimale.</p>
+
+          <p>Cette démonstration n’est que la partie émergée de l’iceberg en termes d’analyse mathématique du sujet, il existe encore des scénarios différents avec leur formule qui leur est propre, nous aurions pu étudier la file d’attente de la production d’un menu, qui elle est composé de plusieurs phases, dont certaines phases dépendent les unes des autres. L’important est de comprendre que cet outil, fait partie de l’arsenal d’un business pour les entreprises, bien qu’il soit majoritairement utilisé par de grandes entreprises qui standardise leur production.</p>
+
+          <p>Cet outil, complète l’aspect psychologique étudié par certains chercheurs comme <a href="https://en.wikipedia.org/wiki/Richard_Larson_(academic)">Richard Larson</a> surnommée Dr.Queue, qui eux s'attardent sur les méthodes pour baisser le mécontentement des clients, lorsque le système d’une file d’attente ne peut être modifié. Il parle souvent des heures de pointe devant les ascenseurs et explique que physiquement on ne peut pas améliorer le trafic, à moins de détruire le bâtiment et le reconstruire avec plus d’ascenseurs. Cependant on peut réduire le désagrément de l’attente, en plaçant des miroirs à chaque étage, pour distraire les utilisateurs.</p>
+
+          <a href="https://www.youtube.com/watch?v=_CBD2z51u5c&t=13s">
+            <img class="img-fluid" src="https://media.graphcms.com/fQDvZ7DHTmKEfUMRcMCz" alt="Richard_Larson">
+          </a>
+          <span class="caption text-muted">New Research on the Theory of Waiting Lines (Queues), Including the Psychology of Queuing</span>
+
+          <p>En conclusion, les mathématiques des files d’attentes permet de résoudre de nombreux soucis de gestion des flux, mais lorsqu’il est question de personne, la psychologie des file d’attente est aussi importante que les mathématiques, la gymnastique est certe bien différente, car comparé aux math, il ne suffit pas de faire varier le flux de client, le nombre de distributeur, ou le temps de service. Cette approche demande parfois plus de créativité et de compréhension du client, mais il n’en reste pas moins que cette approche est efficace et la solution peut être souvent moins coûteuse.</p>
+
+
+          <p>Rédigé par
+            <a href="http://spaceipsum.com/">ROUEK Stéphane</a>.<!-- Photographs by
+            <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.--></p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <!-- Twitter 
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            -->
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; The Queue Research 2021</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
