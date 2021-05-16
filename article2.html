@@ -83,11 +83,11 @@
 
           <p>En principe, cet événement arrive lorsque la demande ne peut être satisfaite aussi vite que l’offre puisse être fournie, mais cela n’influence pas le prix de l’offre pour autant, qui lui-même n’est pas toujours existant exemple: “le prix est inexistant sur les pistes de décollage des aéroports”.</p>
 
-          <p>L’analyse d’un point de vue mathématique a vu le jour avec <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Erlang/">Agner Krarup Erlang</a>. Collaborateur scientifique pour la Copenhagen Telephone Company, il était chargé d’estimer la capacité de la centrale téléphonique de Copenhague, en d’autre terme le nombre de commutateurs et le nombre d'employés pour les changer. A l’époque où les numéros de téléphone n’existaient pas, tous les téléphones étaient reliés à une centrale qui se chargeait de nous brancher avec notre correspondant à l’aide de commutateurs manipulés par des employés (des opérateurs, ou plutôt des opératrices). En bref Erlang à écrit de nombreuse théorie de 1909 à 1917 qui sont réuni dans deux articles, The theory of probability and telephone conversations et Solution of some problems in the theory of probability of significance in automatic telephone exchanges.</p>
+          <p>L’analyse d’un point de vue mathématique a vu le jour avec <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Erlang/">Agner Krarup Erlang</a>. Collaborateur scientifique pour la Copenhagen Telephone Company, il était chargé d’estimer la capacité de la centrale téléphonique de Copenhague, en d’autre terme le nombre de commutateurs et le nombre d'employés pour les changer. A l’époque où les numéros de téléphone n’existaient pas, tous les téléphones étaient reliés à une centrale qui se chargeait de nous brancher avec notre correspondant à l’aide de commutateurs manipulés par des employés (des opérateurs, ou plutôt des opératrices). En bref Erlang à écrit de nombreuse théorie de 1909 à 1917 qui sont réunis dans deux articles, The theory of probability and telephone conversations et Solution of some problems in the theory of probability of significance in automatic telephone exchanges.</p>
 
-          <p>Ces recherches ont ouvert la voie à de nombreux chercheurs, dont un pour qui nous donnerons une attention particulière. Mais avant cela il nous faut mettre en lumière les caractéristiques d’une file d’attente.</p>
+          <p>Ces recherches ont ouvert la voie à de nombreux chercheurs, dont un à qui nous donnerons une attention particulière. Mais avant cela il nous faut mettre en lumière les caractéristiques d’une file d’attente.</p>
 
-          <h2 class="section-heading" id="carateristique">Les 6 caractère commun à une file d’attente</h2>
+          <h2 class="section-heading" id="carateristique">Les 6 caractéristiques communes à une file d’attente</h2>
 
           <p></p>
           <h3>Les entrées</h3>
@@ -96,34 +96,34 @@
         
           <p>On se concentre généralement sur leur fréquence d'arrivée qui peut-être régulière, ou bien aléatoire.</p>
 
-          <h3>Les sortis</h3>
+          <h3>Les sorties</h3>
 
-          <p>Ce sont ceux qui viennent consommer ou bénéficier du service. On pense souvent qu’ils n’ont pas d’influence sur l'efficacité d’une file d’attente, cependant il arrive parfois de devoir les prendre en compte, par exemple,  les checking des bagages dans les aéroports nous fait vider nos sac, pour qu’ils puissent être vérifier, mais le moment on l’on récupère nos affaire est la sortis et sur cas elle n’est pas instantané.</p>
+          <p>Ce sont ceux qui viennent consommer ou bénéficier du service. On pense souvent qu’ils n’ont pas d’influence sur l'efficacité d’une file d’attente, cependant il arrive parfois de devoir les prendre en compte, par exemple,  les checking des bagages dans les aéroports nous fait vider nos sac, pour qu’ils puissent être vérifier, mais le moment on l’on récupère nos affaires correspond à la sortis et sur ce cas elle n’est pas instantané.</p>
 
           <p>On y analyse la capacité et la vitesse de sortie.</p>
 
           <h3>Les canaux de service</h3>
 
-          <p>Les lieux où sont fournis les services. Ils peuvent être un ou plusieurs, exemple: un seul WC, ou bien plusieurs caisses de supermarché.</p>
+          <p>Les lieux où sont fournis les services. Ils peuvent être un ou plusieurs, exemples: un seul WC, ou bien plusieurs caisses de supermarché.</p>
 
           <p>On y analyse la vitesse du service et le nombre de canaux de distribution.</p>
 
           <h3>Le système de distribution</h3>
 
-          <p>C’est tout simplement la manière dont le service le service lui-même est distribué. Il existe plusieurs manières mais on peut se concentrer sur les trois principales.</p>
+          <p>C’est tout simplement la manière dont le service lui-même est distribué. Il existe plusieurs manières mais on peut se concentrer sur les trois principales.</p>
           
           <ul>
               <li>
-                Premier arrivé, premier servis:
+                Premier arrivé, premier servi:
                 <ul>
                     <li>
-                        C’est le plus connue de tous et le plus utilisé surtout pour les gestion de flux humain.
+                        C’est le plus connu de tous et le plus utilisé surtout pour les gestion de flux humain.
                     </li>
                 </ul>
               </li>
 
               <li>
-                Dernier arrivé, premier servis:
+                Dernier arrivé, premier servi:
                 <ul>
                     <li>
                         Il est assez connu dans les systèmes de remplissage ou d’empilement, exemple: lorsqu’un ferry se remplit de véhicule et que son entrée est aussi sa sortie, alors les premier véhicule à embarquer seront les derniers à débarquer.
@@ -133,7 +133,7 @@
               </li>
 
               <li>
-                Servis aléatoire:
+                Service aléatoire:
                 <ul>
                     <li>
                         Son nom est assez explicite.
@@ -175,15 +175,15 @@
 
           <p><span class="bold">A</span> représente le flux interval d'arriver, on le modélise comme on le souhaite nombre d’unité qui arrive par heure, par minute par seconde, par jour, etc...</p>
             
-          <p><span class="bold">B</span> est le temps de distribution d’un service. Il est important de préciser que dans exemple, nous ne prendrons pas en compte les variations de temps de service, mais plutôt une moyenne pour faciliter le calcul.</p>
+          <p><span class="bold">B</span> est le temps de distribution d’un service. Il est important de préciser que dans l'exemple, nous ne prendrons pas en compte les variations de temps de service, mais plutôt une moyenne pour faciliter le calcul.</p>
 
           <p><span class="bold">C</span> est le nombre de points de distribution.</p>
 
-          <p><span class="bold">D</span> est la discipline du système. exemple “premier arrivé premier servis”.</p>
+          <p><span class="bold">D</span> est la discipline du système. exemple “premier arrivé premier servi”.</p>
 
-          <p><span class="bold">E</span> est le nombre maximum admis dans le système. Il est la plupart du temps infinis mais il peut être définis</p>
+          <p><span class="bold">E</span> est le nombre maximum admis dans le système. Il est la plupart du temps infini mais il peut être défini</p>
 
-          <p><span class="bold">F</span> qui est la source d’appel, qui peut être définie ou indéfinie. Cette dernière lettre n’est pas tout le temps prise en compte dans les calculs, du fait qu’elle dépend de l’appréciation de ceux qui l'analysent.</p>
+          <p><span class="bold">F</span> qui est la source d’appel, qui peut être définie ou indéfinie. Cette dernière lettre n’est pas tout le temps pris en compte dans les calculs, du fait qu’elle dépend de l’appréciation de ceux qui l'analysent.</p>
           
           <p class="italic">Si vous l’avez remarqué, la notation de Kendall prend en compte les 6 caractéristiques d’une file d’attente émise un peu plus tôt.</p>
 
@@ -224,7 +224,7 @@
           <p>Wq = 24/(36*12)</p>
           <p>Wq = 0.06 par heure cela équivaut à peu près à 3 min et 20s</p>
 
-          <p>Puis enfin pour connaître le nombre d’employés optimal pour servire nos client on calcule  le coût total de l’attente plus le coût des services  et cela pour différente quantité de services</p>
+          <p>Puis enfin pour connaître le nombre d’employés optimal pour servire nos client on calcule  le coût total de l’attente plus le coût des services  et cela pour différente quantité de services.</p>
 
           <p>Ns * Cs + Wq * Ca</p>
 
